@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+ 
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+<style>*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-book {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #66a5ad, #c4dfe6);
+}
+
+.book {
+  width: 1800px;
+  height: 800px;
+  background-image: linear-gradient(
+      105deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.9) 50%,
+      transparent 50%
+    ),
+    url("https://img.traveltriangle.com/attachments/pictures/891680/original/kufri-link-1.jpg?tr=w-583,h-406");
+  background-size: 100%;
+  background-position: right;
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+}
+
+.book__form {
+  width: 50%;
+  padding: 6rem;
+}
+
+.heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  color: #07575b;
+}
+
+.form__group {
+  margin-bottom: 2rem;
+}
+.form__group:nth-child(3) {
+  margin-bottom: 5rem;
+}
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(196, 223, 230, 0.4);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid #07575b;
+  background-color: rgb(196, 223, 230);
+}
+
+.form__input:focus:invalid {
+  border-bottom: 3px solid #db3030;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: grey;
+}
+
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,
+label {
+    margin: .4rem 0;
+}
+.form__label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block;
+}
+
+.form__radio-input {
+  display: none;
+}
+
+.form__radio-label {
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #07575b;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.4rem;
+}
+
+.form__radio-button::after {
+  content: "";
+  display: block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #07575b;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-top: 4rem;
+  background-color: #07575b;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active,
+.btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+</style>
+  <body>
+    <section class="section-book">
+      <div class="book">
+        <div class="book__form">
+          <form action="#" class="form">
+            <h2 class="heading">
+              Start booking now
+            </h2>
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Full name"
+                id="name"
+                required
+              />
+              <label for="name" class="form__label">Full name</label>
+            </div>
+
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Email address"
+                id="email"
+                required
+              />
+              <label for="email" class="form__label">Email address</label>
+            </div>
+			<label for="pass">Traveller Count:</label>
+<select>
+        <option selected disabled>no of travellers</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+    </select>
+<br><br>
+			
+			
+<label for="start">Check-in:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2020-08-20"
+       min="2020-08-20" max="2021-02-28">
+
+
+            <div class="form__group">
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="small"
+                  name="size"
+                />
+                <label for="small" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                 2D/3N with food for Rs4000 Only                </label>
+              </div>
+
+              <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="large"
+                  name="size"
+                />
+                <label for="large" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                  4D/5N for Rs4500 Only
+                </label>
+              </div>
+<br/><br/><br/>
+ <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="pre"
+                  name="size"
+                />
+                <label for="pre" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                   4D/5N with food for Rs6000 Only
+                </label>
+              </div>
+ <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="pos"
+                  name="size"
+                />
+                <label for="pos" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                   6D/7N  for Rs6500 Only
+                </label>
+              </div>
+
+<br/><br/><br/>
+ <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="hi"
+                  name="size"
+                />
+                <label for="hi" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                   6D/7N with food for Rs7000 Only
+                </label>
+              </div>
+ <div class="form__radio-group">
+                <input
+                  type="radio"
+                  class="form__radio-input"
+                  id="hello"
+                  name="size"
+                />
+                <label for="hello" class="form__radio-label">
+                  <span class="form__radio-button"></span>
+                   8D/9N for Rs8500 Only
+                </label>
+              </div>
+
+            </div>
+
+            <div class="form__group">
+           <button class="btn"><a href="Payment.html">Next step &rarr;</a></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
